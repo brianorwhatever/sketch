@@ -1,6 +1,6 @@
 <script>
   import CanvasDraw from "../src/CanvasDraw.svelte";
-  let brushColor = "#444";
+  let brushColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   let brushRadius = 10;
   let bgImage = "./images/cat.png";
   let imgBase64 = null;
@@ -84,13 +84,6 @@
 </div>
 
 <style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
   .tools {
     width: 600px;
     margin: auto;
@@ -99,7 +92,6 @@
     gap: 10px;
     align-items: end;
     justify-items: center;
-    /* grid-auto-rows: minmax(75px, auto); */
   }
 
   .row {
