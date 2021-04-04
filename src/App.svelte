@@ -57,33 +57,26 @@
       <div class="row">
         <div class="col d-flex justify-content-center">
           <div class="col-auto">
-            <h1>sketch.exchange</h1>
-            <button class="btn btn-primary" on:click={clear}>Clear</button>
+            <h1>sketch.money</h1>
           </div>
+        </div>
+      </div>
+      <div class="row tools">
+        <div>
+          <label for="color">Brush Color</label>
+          <input name="color" type="color" bind:value={brushColor} />
+        </div>
+        <div>
+          <label for="radius">Brush Radius</label>
+          <input name="radius" type="number" bind:value={brushRadius} />
+        </div>
+        <div>
+          <button class="btn btn-primary" on:click={clear}>Clear</button>
         </div>
       </div>
       <div class="row">
         <div class="col d-flex justify-content-center">
           <CanvasDraw bind:this={SDraw} {brushColor} {brushRadius} />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <div class="row">
-            <div class="col d-flex justify-content-center">
-              <div class="form-row align-items-center">
-                <div class="col-auto">
-                  <label>Brush Color</label>
-                  <input type="color" bind:value={brushColor} />
-                </div>
-                <div class="col-auto">
-                  <label>Brush Radius</label>
-                  <input type="number" bind:value={brushRadius} />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -98,11 +91,27 @@
     margin: 0 auto;
   }
 
+  .tools {
+    width: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: end;
+    justify-items: center;
+    /* grid-auto-rows: minmax(75px, auto); */
+  }
+
+  .row {
+    text-align: center;
+  }
+
   h1 {
-    color: #ff3e00;
+    color: #33b90e;
     text-transform: uppercase;
     font-size: 4em;
-    font-weight: 100;
+    font-weight: 300;
+    margin: 0;
   }
 
   @media (min-width: 640px) {

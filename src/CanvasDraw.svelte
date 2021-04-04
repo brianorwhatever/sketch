@@ -527,7 +527,7 @@
 </script>
 
 <div
-  class="drwaing-container {classes}"
+  class="drawing-container {classes}"
   style="height:{canvasHeight}px; width:{canvasWidth}px; background-color:{backgroundColor}"
   bind:this={canvasContainer}
 >
@@ -549,8 +549,9 @@
 </div>
 
 <style>
-  .drwaing-container {
+  .drawing-container {
     display: block;
     touch-action: none;
+    margin: auto;
   }
 </style>
