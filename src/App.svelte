@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col d-flex justify-content-center">
+        <div class="col d-flex justify-content-center canvas">
           <CanvasDraw bind:this={SDraw} {brushColor} {brushRadius} />
         </div>
       </div>
@@ -96,6 +96,12 @@
 
   .row {
     text-align: center;
+  }
+
+  .canvas {
+    border: 10px ridge #33b90e;
+    width: 600px;
+    margin: auto;
   }
 
   h1 {
